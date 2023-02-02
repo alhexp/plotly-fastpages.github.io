@@ -13,5 +13,5 @@ branding:
   color: 'blue'
   icon: 'book'
 runs:
-  using: 'node16'
-  image: 'node16'
+  using: 'docker'
+  image: '_action_files/Dockerfile'
