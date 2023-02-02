@@ -45,9 +45,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
-        uses: actions/setup-python@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
-          python-version: 3.6
+          python-version: '3.10' 
+      - run: python my_script.py
 
       - name: install requests
         run: pip3 install requests
